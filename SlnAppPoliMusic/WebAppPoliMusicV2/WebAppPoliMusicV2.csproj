@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{00000000-0000-0000-0000-000000000005}</ProjectGuid>
+	<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace>WebAppPoliMusicV2</RootNamespace>
+	<AssemblyName>WebAppPoliMusicV2</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>bin\</OutputPath>
+	<DefineConstants>DEBUG;TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>bin\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Data" />
+	<Reference Include="System.Configuration" />
+	<Reference Include="System.Web" />
+	<Reference Include="System.Web.Extensions" />
+	<Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+	<Content Include="Web.config" />
+	<Content Include="Styles.css" />
+	<Content Include="Default.aspx" />
+	<Content Include="Login.aspx" />
+	<Content Include="Song.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+	<Compile Include="Default.aspx.cs">
+	  <DependentUpon>Default.aspx</DependentUpon>
+	  <SubType>ASPXCodeBehind</SubType>
+	</Compile>
+	<Compile Include="Default.aspx.designer.cs">
+	  <DependentUpon>Default.aspx</DependentUpon>
+	</Compile>
+	<Compile Include="Login.aspx.cs">
+	  <DependentUpon>Login.aspx</DependentUpon>
+	  <SubType>ASPXCodeBehind</SubType>
+	</Compile>
+	<Compile Include="Login.aspx.designer.cs">
+	  <DependentUpon>Login.aspx</DependentUpon>
+	</Compile>
+	<Compile Include="Song.aspx.cs">
+	  <DependentUpon>Song.aspx</DependentUpon>
+	  <SubType>ASPXCodeBehind</SubType>
+	</Compile>
+	<Compile Include="Song.aspx.designer.cs">
+	  <DependentUpon>Song.aspx</DependentUpon>
+	</Compile>
+	<Compile Include="DAL\User.cs" />
+	<Compile Include="DAL\Song.cs" />
+	<Compile Include="Util\Hash.cs" />
+	<Compile Include="Util\FileManagement.cs" />
+	<Compile Include="BLL\User.cs" />
+	<Compile Include="BLL\Song.cs" />
+	<Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+	<ProjectReference Include="..\BLL\BLL.csproj">
+	  <Project>{00000000-0000-0000-0000-000000000004}</Project>
+	  <Name>BLL</Name>
+	</ProjectReference>
+	<ProjectReference Include="..\Entities\Entities.csproj">
+	  <Project>{00000000-0000-0000-0000-000000000001}</Project>
+	  <Name>Entities</Name>
+	</ProjectReference>
+	<ProjectReference Include="..\Util\Util.csproj">
+	  <Project>{00000000-0000-0000-0000-000000000002}</Project>
+	  <Name>Util</Name>
+	</ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

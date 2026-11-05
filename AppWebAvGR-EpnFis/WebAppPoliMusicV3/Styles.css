@@ -1,0 +1,18 @@
+﻿body { background: #f5f7fa; color: #202733; }
+.navbar-brand { font-weight: 700; }
+.card { border: 0; box-shadow: 0 0.35rem 1.2rem rgba(20, 35, 55, 0.08); }
+.form-message { display: block; margin-top: 0.75rem; }
+.song-player { min-width: 220px; max-width: 300px; }
+.welcome-panel { display: flex; align-items: center; gap: 1.25rem; padding: 2rem; color: #fff; border-radius: 1.25rem; background: linear-gradient(120deg, #172554, #4f46e5 62%, #7c3aed); box-shadow: 0 1rem 2.5rem rgba(49, 46, 129, .2); }
+.welcome-panel h1 { margin: .35rem 0; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 750; }
+.welcome-panel p { color: rgba(255,255,255,.78); }
+.welcome-icon { display: grid; flex: 0 0 4rem; width: 4rem; height: 4rem; place-items: center; border: 1px solid rgba(255,255,255,.28); border-radius: 1.2rem; background: rgba(255,255,255,.14); font-size: 2rem; }
+.eyebrow { color: #a5b4fc; font-size: .72rem; font-weight: 700; letter-spacing: .14em; }
+.library-card { overflow: hidden; border: 1px solid #e7eaf2; border-radius: 1rem; background: #fff; box-shadow: 0 .5rem 1.5rem rgba(20, 35, 55, .06); }
+.library-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid #edf0f5; }
+.library-heading .eyebrow { color: #6366f1; }
+.song-count { padding: .4rem .75rem; color: #4338ca; border-radius: 999px; background: #eef2ff; font-size: .85rem; font-weight: 600; }
+.preview-note { display: block; padding: .75rem 1.5rem; color: #854d0e; background: #fefce8; font-size: .9rem; }
+.song-table th { padding: .9rem 1rem; color: #5b6475; border-bottom-width: 1px; background: #f8f9fc; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.song-table td { padding: .8rem 1rem; border-color: #edf0f5; }
+.song-table tr:last-child td { border-bottom: 0; }

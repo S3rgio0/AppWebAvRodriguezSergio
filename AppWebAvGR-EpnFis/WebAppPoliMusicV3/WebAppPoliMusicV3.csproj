@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.props" Condition="Exists('$(MSBuildToolsPath)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D772E984-5C30-4D34-829E-41F6DD893604}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType><RootNamespace>WebAppPoliMusicV3</RootNamespace><AssemblyName>WebAppPoliMusicV3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion><FileAlignment>512</FileAlignment><LangVersion>7.3</LangVersion><UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" />
+    <Reference Include="System.Configuration" /><Reference Include="System.Web" /><Reference Include="System.Web.Extensions" /><Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityLayer.PoliMusicV3\EntityLayer.PoliMusicV3.csproj"><Project>{A449B651-2F0D-4A01-996B-1EC3AA560301}</Project><Name>EntityLayer.PoliMusicV3</Name></ProjectReference>
+    <ProjectReference Include="..\BLL.PoliMusicV3\BLL.PoliMusicV3.csproj"><Project>{C661D873-4B2F-4C23-B18D-30E5CC782503}</Project><Name>BLL.PoliMusicV3</Name></ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" /><Content Include="Global.asax" /><Content Include="Styles.css" />
+    <Content Include="Default.aspx" /><Content Include="Login.aspx" /><Content Include="Logout.aspx" /><Content Include="SignUp.aspx" /><Content Include="Song.aspx" /><Content Include="Site.Master" />
+    <Content Include="PlaylistImages\.gitkeep" /><Content Include="SongFiles\.gitkeep" /><Content Include="UserImages\.gitkeep" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs"><DependentUpon>Global.asax</DependentUpon></Compile>
+    <Compile Include="FileManagement.cs" />
+    <Compile Include="Default.aspx.cs"><DependentUpon>Default.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Default.aspx.designer.cs"><DependentUpon>Default.aspx</DependentUpon></Compile>
+    <Compile Include="Login.aspx.cs"><DependentUpon>Login.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Login.aspx.designer.cs"><DependentUpon>Login.aspx</DependentUpon></Compile>
+    <Compile Include="Logout.aspx.cs"><DependentUpon>Logout.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Logout.aspx.designer.cs"><DependentUpon>Logout.aspx</DependentUpon></Compile>
+    <Compile Include="SignUp.aspx.cs"><DependentUpon>SignUp.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="SignUp.aspx.designer.cs"><DependentUpon>SignUp.aspx</DependentUpon></Compile>
+    <Compile Include="Song.aspx.cs"><DependentUpon>Song.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Song.aspx.designer.cs"><DependentUpon>Song.aspx</DependentUpon></Compile>
+    <Compile Include="Site.Master.cs"><DependentUpon>Site.Master</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Site.Master.designer.cs"><DependentUpon>Site.Master</DependentUpon></Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != '' And Exists('$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets')" />
+</Project>
